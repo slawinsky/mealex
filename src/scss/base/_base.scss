@@ -33,6 +33,14 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  @media (min-width: 950px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .container {
+  max-width: 1366px;
   height: 100%;
 }
