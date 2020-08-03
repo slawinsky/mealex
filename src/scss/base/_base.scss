@@ -9,14 +9,30 @@
 }
 
 html,
-button {
+button,
+input[type="submit"],
+input[type="text"],
+textarea {
   font-family: "Cormorant", serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  font-size: 14px;
+
+  @media (min-width: 950px) {
+    font-size: 18px;
+  }
+}
+
 html,
 body {
   height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 100%;
 }
