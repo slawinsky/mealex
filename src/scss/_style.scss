@@ -159,17 +159,28 @@ section {
   font-size: 1rem;
   cursor: pointer;
   font-weight: 500;
+  transition: all 0.3s ease;
 
   &-light {
     color: $black;
     background-color: $white;
     border: 1px solid $lighterBlack;
+
+    &:hover {
+      background-color: $lighterBlack;
+      color: $white;
+    }
   }
 
   &-dark {
     color: $white;
     background-color: $lighterBlack;
     border: 1px solid $lighterBlack;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
   }
 
   &-shadow {
@@ -253,11 +264,25 @@ section {
 // header
 .header {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1366px;
   padding: 1em;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
+
+  @media (min-width: 950px) {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+  }
+
+  @media (min-width: 1250px) {
+    padding: 1em 6em;
+  }
+}
+
+.sticky {
+  background-color: $white;
 }
 
 // navigation
