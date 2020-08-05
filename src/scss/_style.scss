@@ -200,10 +200,11 @@ section {
   margin: 0;
   outline: none;
   transition: transform 0.3s ease-in-out;
+  z-index: 2;
 
   &__box {
-    width: 30px;
-    height: 20px;
+    width: 25px;
+    height: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,7 +213,7 @@ section {
 
   &__inner {
     width: 100%;
-    height: 4px;
+    height: 3px;
     background-color: $black;
     position: absolute;
     transition: background-color 0.3s 0.1s ease-in-out;
@@ -220,7 +221,7 @@ section {
     &::before,
     &::after {
       width: 100%;
-      height: 4px;
+      height: 3px;
       background-color: $black;
       position: absolute;
       left: 0;
@@ -230,11 +231,11 @@ section {
     }
 
     &::before {
-      top: -14px;
+      top: -11px;
     }
 
     &::after {
-      top: 14px;
+      top: 11px;
     }
   }
 
@@ -244,8 +245,6 @@ section {
 }
 
 .hamburger--active {
-  transform: translateX(250px);
-
   .hamburger__inner {
     background-color: transparent;
   }
@@ -269,20 +268,13 @@ section {
   display: flex;
   justify-content: space-between;
   z-index: 2;
-
-  @media (min-width: 950px) {
-    position: absolute;
-    top: 0;
-    background-color: transparent;
-  }
+  position: sticky;
+  background-color: $white;
+  top: 0;
 
   @media (min-width: 1250px) {
     padding: 1em 6em;
   }
-}
-
-.sticky {
-  background-color: $white;
 }
 
 // navigation
@@ -294,6 +286,8 @@ section {
   transform: translateY(-100vh);
   top: 0;
   left: 0;
+  z-index: 1;
+  transition: all 0.5s ease;
 
   @media (min-width: 950px) {
     transform: translateY(0vh);
@@ -310,6 +304,10 @@ section {
       display: flex;
     }
   }
+}
+
+.nav--active {
+  transform: translateY(0vh);
 }
 
 .active {
@@ -439,9 +437,11 @@ section {
     height: 100%;
     display: block;
     width: 0;
-    color: $lighterBlack;
+    background-color: $lighterBlack;
     line-height: 10px;
     position: absolute;
+
+    transition: all 1s ease;
   }
 }
 
@@ -471,7 +471,7 @@ section {
 
   &__content {
     justify-content: center;
-    min-height: 850px;
+    min-height: 1000px;
 
     background-color: $white;
     padding: 2em 3em;
