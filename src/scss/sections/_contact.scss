@@ -1,0 +1,46 @@
+.contact {
+  &__form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
+
+    @media (min-width: 950px) {
+      width: 100%;
+    }
+  }
+
+  &__row {
+    width: 100%;
+
+    @media (min-width: 950px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__input,
+  &__message {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $black;
+    padding: 0.5em;
+    font-size: 1rem;
+    font-weight: 400;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  &__input {
+    @media (min-width: 950px) {
+      width: 49%;
+    }
+  }
+
+  &__message {
+    min-height: 70px;
+  }
+}

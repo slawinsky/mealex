@@ -1,0 +1,76 @@
+.main {
+  min-height: 350px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &__hero {
+    display: none;
+  }
+
+  @media (min-width: 950px) {
+    min-height: 800px;
+    align-items: flex-start;
+
+    &__content {
+      margin-left: 5em;
+    }
+
+    &__hero {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__pattern {
+    background-color: $white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    &::before {
+      width: 33%;
+      height: 61%;
+      display: inline-block;
+      background-color: transparent;
+      border: 1.125em solid $gray;
+      content: "";
+      z-index: -1;
+      position: absolute;
+      bottom: 14%;
+      left: -10%;
+    }
+
+    &::after {
+      width: 21%;
+      height: 47%;
+      display: none;
+      background-color: transparent;
+      border: 1.125em solid $white;
+      content: "";
+      z-index: -1;
+      position: absolute;
+      bottom: 21%;
+      right: -5%;
+    }
+
+    @media (min-width: 950px) {
+      background: linear-gradient(
+        to right,
+        $white 0%,
+        $white 53%,
+        $lighterGray 53%,
+        $lighterGray 100%
+      );
+
+      &::after {
+        display: inline-block;
+      }
+    }
+  }
+}

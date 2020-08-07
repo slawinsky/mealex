@@ -1,0 +1,17 @@
+.fun-fact {
+  background: url("../assets/img/img.jpg") no-repeat center center;
+  padding: 4em 0;
+
+  @media (min-width: 950px) {
+    min-height: 290px;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  &__fact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

@@ -1,6 +1,18 @@
 // base
 @import "base/base";
 @import "base/vars";
+@import "base/typography";
 
-// style
-@import "style.scss";
+// components
+@import "components/btn";
+@import "components/hamburger";
+
+// sections
+@import "sections/header";
+@import "sections/main";
+@import "sections/knowledge";
+@import "sections/services";
+@import "sections/portfolio";
+@import "sections/fun-fact";
+@import "sections/contact";
+@import "sections/footer";

@@ -1,0 +1,33 @@
+.btn {
+  padding: 0.5em 1.5em;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &-light {
+    color: $black;
+    background-color: $white;
+    border: 1px solid $lighterBlack;
+
+    &:hover {
+      background-color: $lighterBlack;
+      color: $white;
+    }
+  }
+
+  &-dark {
+    color: $white;
+    background-color: $lighterBlack;
+    border: 1px solid $lighterBlack;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+
+  &-shadow {
+    box-shadow: -0.7px 10px 18px rgba(0, 0, 0, 0.15);
+  }
+}

@@ -44,3 +44,17 @@ body {
   max-width: 1366px;
   height: 100%;
 }
+
+section {
+  padding: 3em 2.5em;
+  min-height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 950px) {
+    padding: 2em 4em;
+    min-height: 450px;
+  }
+}

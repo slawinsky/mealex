@@ -1,0 +1,51 @@
+.knowledge {
+  min-height: 450px;
+
+  @media (min-width: 950px) {
+    min-height: auto;
+  }
+
+  &__skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-height: 310px;
+    width: 100%;
+
+    @media (min-width: 950px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      min-height: 200px;
+    }
+  }
+
+  &__skill {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: 950px) {
+      width: 30%;
+    }
+  }
+
+  &__bar {
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: $gainsboro;
+  }
+
+  &__bar span {
+    height: 100%;
+    display: block;
+    width: 0;
+    background-color: $lighterBlack;
+    line-height: 10px;
+    position: absolute;
+
+    transition: all 1s ease;
+  }
+}
